@@ -4,8 +4,8 @@ import Header from './component/Header';
 import Shelf from './component/Shelf';
 import SearchBar from './component/SearchBar';
 import Booklist from './component/Booklist';
-
-class App extends Component() {
+import Data from './react-starter/Data'
+class App extends Component {
   constructor(){
     super()
     this.state = {
@@ -33,10 +33,17 @@ class App extends Component() {
   render () {
     return (
       <div className="App">
+
+        <div className='topHalf'>
         <Header/>
-        <Shelf/>
         <SearchBar/>
+        </div>
+
+        <div className='bottomHalf'>
+        <Shelf/>
         <Booklist/>
+        </div>
+
       </div>
     );
   }
